@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <meta charset="utf-8">
         <title>UNDER CONSTRUCTION</title>
+        <style>
+            .switcher {
+                position: relative;
+                width: 480px;
+                height: 563px;
+                overflow: hidden;
+                background: #000;
+            }
+
+            .switcher img {
+                position: absolute;
+                inset: 0;          /* 親の中で完全に重ねる */
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.08s linear;
+            }
+
+            .hidden { opacity: 0; }
+            .visible { opacity: 1; }
+        </style>
     </head>
     <body>
         <h1>UNDER CONSTRUCTION</h1>
-        <h1><marquee><font color="#ff0000">安倍晋三</font></marquee></h1>
+        <h1><marquee scrollamount="100"><font color="#ff0000">安倍晋三</font></marquee></h1>
+        <div class="switcher">
+            <img id="imgA" class="visible" src="assets/abe0.png" alt="" />
+            <img id="imgB" class="hidden"  src="assets/abe1.png" alt="" />
+        </div>
+        <script src="script.js"></script>
+        <p>
+            <h2>吉野匠/zoheのサイト</h2><br/>
+            <a href="https://twitter.com/zohen0">Twitter</a><br/>
+            <a href="https://twitter.com/fucihi">Twitter2</a>
+        </p>
     </body>
 </html>
